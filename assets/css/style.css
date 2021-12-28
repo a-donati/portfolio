@@ -1,0 +1,307 @@
+/* universal styling */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: pink;
+    --secondary-color: #36362b;
+    --tertiary-color: rgb(178, 173, 250);
+    --quaternary-color: rgb(174, 247, 247);
+    --font-primary: Georgia, Tahoma, trebuchet, serif;
+    --font-secondary: Verdana, sans-serif, arial;
+}
+
+/* Anchor tag styling*/
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+/* Header styles - Flex */
+header {
+    padding: 35px 35px 20px 0px;
+    background: var(--tertiary-color);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    border-bottom: 4px solid var(--quaternary-color);
+    z-index: 1;
+}
+
+/* Header h1 styling */
+header h1 {
+    color: var(--secondary-color);
+    background: var(--primary-color);
+    font-size: 40px;
+    padding: 5px 50px;
+    font-family: var(--font-primary);
+    border-radius: 0 5px 5px 0;
+}
+
+header nav {
+    margin: 15px;
+}
+
+
+/* Header nav link styling - flex */
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 5px;
+}
+
+header nav ul li a {
+    font-size: 20px;
+    padding: 5px 15px;
+    font-family: var(--font-secondary);
+    border-bottom: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Hover transitions - highlighted when hovered */
+header nav ul li a:hover {
+    background: var(--primary-color);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+/* Hero image styling*/
+.hero {
+    background-image: url(/assets/images/pink-clouds.jpeg);
+    height: 250px;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    background-size: cover;
+    align-items: flex-end;
+    border-bottom: 4px solid var(--quaternary-color);
+}
+
+/* Nested h2 within the hero class */
+.hero h2 {
+    font-family: var(--font-primary);
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 30px;
+    padding: 5px 50px;
+    margin-bottom: 20px;
+    border-radius: 5px 0 0 5px;
+    opacity: 0.7;
+}
+
+/* Main container styling - flex*/
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0;
+    display: flex;
+}
+
+.container-title {
+    width: 25%;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    border-right: solid black 4px;
+    text-align: right;
+    padding-right: 20px;
+    margin-right: 10px;
+}
+
+.container-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container-content p {
+    width: 70%;
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: var(--font-secondary);
+}
+
+/* Projects styling*/
+.grid-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Grid containing projects */
+.grid-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(3, 175px);
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    padding-bottom: 20px;
+}
+
+/* First project display */
+.project-1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.project-image {
+    border: 4px solid var(--primary-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: var(--tertiary-color);
+}
+
+/* When project image is hovered, opacity will decrease */
+.screenshot {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.screenshot:hover {
+    opacity: 0.4;
+}
+
+/* Project title and description positioning */
+.description {
+    position: absolute;
+    width: 100px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    background: var(--primary-color);
+    border-radius: 0 5px 5px 0;
+    text-align: left;
+    color: var(--secondary-color);
+}
+
+.description h3 {
+    font-size: 14px;
+    font-family: var(--font-primary);
+}
+
+.description p {
+    font-size: 10px;
+    font-family: var(--font-secondary);
+}
+
+/* Contact section styling */
+.contact {
+    align-content: center;
+    font-family: var(--font-secondary);
+    font-weight: 18px;
+}
+
+.contact a {
+    padding: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.contact a:hover {
+    background: var(--primary-color);
+    transition: 0.5s;
+}
+
+/* Footer styling */
+footer {
+    /* height: 130px; */
+    /* padding-top: 20px; */
+    border-top: 4px solid var(--quaternary-color);
+    background: var(--tertiary-color);
+    text-align: center;
+}
+
+footer div {
+    color: var(--secondary-color);
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    /* padding-top: 30px; */
+}
+
+/* Media queries for larger screens */
+@media screen and (max-width: 1292px) {
+    .container-content {
+        display: inline;
+    }
+
+    .container-content p {
+         width: 100%;
+        /* width: 60%;  */
+    }
+
+    .contact {
+        display: flex;
+    }
+    
+}
+
+@media screen and (max-width: 1028px) {
+    header  {
+        padding-bottom: 0;
+        position: relative;
+        justify-content: center;
+    }
+    
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .grid-layout {
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(4, 100px);
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 0 15px;
+    }
+    .container {
+        display: inline;
+    }
+
+    .container-title {
+        width: 100%;
+        text-align: center;
+        border-right: none;
+        border-bottom: solid black 4px;
+        margin: 20px 0;
+        padding: 0;
+        padding-bottom: 10px;
+    }
+
+    .contact {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    header nav ul {
+        justify-content: space-around;
+    }
+    
+    header nav ul li a {
+        margin-top: 10px;
+    }
+    
+}
+
