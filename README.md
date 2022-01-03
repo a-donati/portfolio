@@ -13,7 +13,8 @@ Clone the repository [here](https://github.com/a-donati/portfolio)
 ## Usage
 
 
- ![The portfolio webpage includes a navigation bar, a header image, and contact links at the bottom of the page.]()
+ ![The portfolio webpage includes a navigation bar, a header image, and contact links at the bottom of the page.](https://user-images.githubusercontent.com/94128491/147958689-f3653a7b-5229-4760-9f52-c7a4317d05d1.png)
+
 
   
 
