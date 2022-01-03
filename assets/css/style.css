@@ -77,7 +77,7 @@ header nav ul li a:hover {
 
 /* Hero image styling*/
 .hero {
-    background-image: url(/assets/images/pink-clouds.jpeg);
+    background-image: url(../images/pink-clouds.jpeg);
     height: 250px;
     display: flex;
     background-position: center;
